@@ -93,7 +93,7 @@ const mailMe = (event) => {
   if (isValid) {
     const params = { email: email, name: name, phone: phone, comment: comment };
 
-    emailjs.send("service_o8kegwh", "template_ihc7h5m", params).then(
+    emailjs.send("service_code", "template_code", params).then(
       (response) => {
         alert("Email sent successfully!");
         console.log("SUCCESS:", response);
