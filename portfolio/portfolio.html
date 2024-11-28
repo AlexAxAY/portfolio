@@ -27,14 +27,18 @@
     />
 
     <!-- js -->
-    <script src="portfolio.js"></script>
+    <script defer src="portfolio.js"></script>
   </head>
   <body>
     <!-- navbar -->
     <nav class="navbar bg-dark sticky-top">
       <div class="container-fluid">
         <div class="logo d-flex ms-5">
-          <img class="navbar-brand m-0 p-0" src="./images/logo.png" />
+          <img
+            class="navbar-brand m-0 p-0"
+            src="./images/logo.webp"
+            loading="lazy"
+          />
           <span class="mt-auto ms-1"></span>
         </div>
 
@@ -100,7 +104,7 @@
       <div class="home-sub d-flex">
         <div><h1 class="text-center">Hello,</h1></div>
         <div>
-          <h1 class="text-center">
+          <h1 class="text-center" style="will-change: transform">
             Your search for the best web developer ends right here
           </h1>
         </div>
@@ -119,7 +123,7 @@
       <div class="about-sub row">
         <div class="image-holder col-12 mb-5 col-lg p-0 mb-lg-0">
           <div class="profile-pic d-flex">
-            <img src="./images/dp.png" alt="profile-pic" />
+            <img src="./images/dp.webp" alt="profile-pic" />
           </div>
         </div>
         <div class="intro col-12 col-lg p-0">
@@ -186,7 +190,12 @@
                     combining creativity with modern design principles.
                   </p>
                   <div class="d-flex justify-content-center">
-                    <img class="mern" src="./images/js.png" alt="MERN logo" />
+                    <img
+                      class="mern"
+                      src="./images/js.webp"
+                      alt="MERN logo"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -208,10 +217,16 @@
                   and high-quality audio production.
                 </p>
                 <div class="d-flex justify-content-center">
-                  <img class="audition" src="./images/aud.png" alt="audition" />
                   <img
+                    loading="lazy"
+                    class="audition"
+                    src="./images/aud.webp"
+                    alt="audition"
+                  />
+                  <img
+                    loading="lazy"
                     class="Fl-studio"
-                    src="./images/fl studio.png"
+                    src="./images/fl studio.webp"
                     alt="Fl-studio"
                   />
                 </div>
@@ -235,8 +250,9 @@
                 </p>
                 <div class="d-flex justify-content-center">
                   <img
+                    loading="lazy"
                     class="premier-pro"
-                    src="./images/pro.png"
+                    src="./images/pro.webp"
                     alt="premier-pro"
                   />
                 </div>
@@ -387,11 +403,15 @@
         <h1 class="contact-heading">Contact me</h1>
         <div class="social-media text-center">
           <a href="https://www.facebook.com/share/17nNX88djY/?mibextid=LQQJ4ds"
-            ><img src="./images/fb.png" alt="fb"
+            ><img loading="lazy" src="./images/fb.webp" alt="fb"
           /></a>
           <a
             href="https://www.instagram.com/lionel_mysterio?igsh=MW82b3Y3MHl4aGlyYQ%3D%3D&utm_source=qr"
-            ><img width="100px" src="./images/insta.png" alt="insta"
+            ><img
+              loading="lazy"
+              width="100px"
+              src="./images/insta.webp"
+              alt="insta"
           /></a>
         </div>
 
@@ -406,6 +426,9 @@
                 id="email"
                 placeholder="Email"
               />
+              <div id="email-error" class="invalid-feedback">
+                Please provide a valid email address.
+              </div>
             </div>
 
             <div class="mb-3">
@@ -416,6 +439,9 @@
                 id="name"
                 placeholder="Name"
               />
+              <div id="name-error" class="invalid-feedback">
+                Please enter your name.
+              </div>
             </div>
 
             <div class="mb-3">
@@ -426,6 +452,9 @@
                 id="phone"
                 placeholder="Phone"
               />
+              <div id="phone-error" class="invalid-feedback">
+                Please enter your phone number.
+              </div>
             </div>
 
             <div class="mb-3">
@@ -437,6 +466,9 @@
                 id="comment"
                 placeholder="Leave your message here.."
               ></textarea>
+              <div id="comment-error" class="invalid-feedback">
+                Please enter your message.
+              </div>
             </div>
 
             <div class="submit text-center">
@@ -450,6 +482,7 @@
 
     <!-- bootstrap -->
     <script
+      defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
@@ -457,13 +490,14 @@
 
     <!-- Email js -->
     <script
+      defer
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <script type="text/javascript">
+    <script defer type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: "fill your key",
+          publicKey: "your code",
         });
       })();
     </script>
